@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
 FROM --platform=i386 alpine
-RUN apt-get -y install apt-utils gcc python3 vim unzip ruby nodejs fakeroot dbus patch file luajit make dialog curl less netcat-openbsd bash
+RUN apk add --no-cache gcc python3 vim unzip ruby nodejs fakeroot dbus patch file luajit make dialog curl less netcat-openbsd bash
 ENV TERM="xterm" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C"
 CMD [ "/bin/bash" ]
